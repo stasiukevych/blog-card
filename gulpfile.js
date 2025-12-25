@@ -6,22 +6,22 @@ const cssnano = require('cssnano');
 
 const sync = require('browser-sync').create();
 
-// compile sass from app folder
+// compile sass from docs folder
 function compile() {
-    return gulp.src('app/scss/**/*.scss', {sourcemaps: true})
+    return gulp.src('docs/scss/**/*.scss', {sourcemaps: true})
         .pipe(sass({
             logger: {
                 debug: (msg) => log.info('[SCSS Debug]:', msg)
             }
         }, undefined).on('error', sass.logError))
         .pipe(postcss([cssnano()]))
-        .pipe(gulp.dest('app/css', {sourcemaps: '.'}));
+        .pipe(gulp.dest('docs/css', {sourcemaps: '.'}));
 }
 
-// watching a file changes from app folder
+// watching a file changes from docs folder
 function watch() {
     gulp.watch('*.html', reload);
-    gulp.watch(['app/scss/**/*.scss'], gulp.series(compile, reload));
+    gulp.watch(['docs/scss/**/*.scss'], gulp.series(compile, reload));
 }
 
 function reload(cb) {
@@ -29,11 +29,11 @@ function reload(cb) {
     cb();
 }
 
-// start browser listen a changes from app folder
+// start browser listen a changes from docs folder
 async function serve(cb) {
     await sync.init({
         server: {
-            baseDir: 'app'
+            baseDir: 'docs'
         }
     });
     cb();
