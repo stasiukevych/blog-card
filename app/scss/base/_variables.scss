@@ -1,0 +1,30 @@
+:root {
+  --clr-gray-500: rgba(107, 107, 107, 1);
+  --clr-gray-950: rgba(17, 17, 17, 1);
+  --clr-yellow: rgba(244, 208, 78, 1);
+  --clr-white: rgba(255, 255, 255, 1);
+
+  --fs-12: .75rem;
+  --fs-14: .875rem;
+  --fs-16: 1rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+
+  --fw-500: 500;
+  --fw-800: 800;
+
+  --lh-150: 1.5;
+
+  --space-4: .25rem;
+  --space-8: .5rem;
+  --space-12: .75rem;
+  --space-24: 1.5rem;
+
+  --radius-4: .25rem;
+  --radius-10: .625rem;
+  --radius-20: 1.25rem;
+
+  --ff-primary: 'Figtree', sans-serif;
+  --card-border: 1px solid var(--clr-gray-950);
+  --card-shadow: .5rem .5rem 0 rgba(0, 0, 0, 1);
+}

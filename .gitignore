@@ -1,0 +1,93 @@
+# Avoid accidental upload of the Sketch and Figma design files
+#####################################################
+## Please do not remove lines 5 and 6 - thanks! 🙂 ##
+#####################################################
+*.sketch
+*.fig
+
+# Avoid accidental XD upload if you convert the design file
+###############################################
+## Please do not remove line 12 - thanks! 🙂 ##
+###############################################
+*.xd
+
+# Avoid your project being littered with annoying .DS_Store files!
+.DS_Store
+.prettierignore
+
+# Node.js / NPM / Yarn
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm-debug.log*
+
+# Webstorm / JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+out/
+
+# Sass
+.sass-cache/
+*.css.map
+
+# Compiled CSS (uncomment if you don't want to commit compiled files)
+# *.css
+# /css/
+# /dist/css/
+
+# Gulp
+.gulp-cache/
+.tmp/
+
+# Build / Distribution
+dist/
+build/
+.publish/
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Source maps (optional)
+*.map
+css/

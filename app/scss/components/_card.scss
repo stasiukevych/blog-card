@@ -1,0 +1,82 @@
+@use '../layout' as layout;
+
+.card {
+  @include layout.flex-container($direction: column, $gap: var(--space-24));
+
+  padding: var(--space-24);
+  border: var(--card-border);
+  border-radius: var(--radius-20);
+  background-color: var(--clr-white);
+  box-shadow: var(--card-shadow);
+
+  &__image.primary {
+    overflow: hidden;
+    border-radius: var(--radius-10);
+  }
+
+  &__content {
+    @include layout.flex-container($direction: column, $gap: var(--space-12));
+  }
+
+  &__tag {
+    width: fit-content;
+    border-radius: var(--radius-4);
+    padding: var(--space-4) var(--space-12);
+
+    font-size: var(--fs-14);
+    @media (max-width: 52.125em) {
+      font-size: var(--fs-12);
+    }
+
+    font-weight: var(--fw-800);
+
+    color: var(--clr-gray-950);
+    background-color: var(--clr-yellow);
+  }
+
+  &__publication {
+    font-size: var(--fs-14);
+    @media (max-width: 52.125em) {
+      font-size: var(--fs-12);
+    }
+
+    font-weight: var(--fw-500);
+    color: var(--clr-gray-950);
+  }
+
+  &__title {
+    font-size: var(--fs-24);
+    @media (max-width: 52.125em) {
+      font-size: var(--fs-20);
+    }
+
+    font-weight: var(--fw-800);
+    color: var(--clr-gray-950);
+
+    &:hover {
+      color: var(--clr-yellow);
+    }
+  }
+
+  &__description {
+    font-size: var(--fs-16);
+    @media (max-width: 52.125em) {
+      font-size: var(--fs-14);
+    }
+
+    font-weight: var(--fw-500);
+    color: var(--clr-gray-500);
+  }
+
+  &__author {
+    @include layout.flex-container($align: center, $gap: var(--space-12));
+
+    font-size: var(--fs-14);
+    font-weight: var(--fw-800);
+    color: var(--clr-gray-950);
+
+    .author-image {
+      max-width: 2rem;
+    }
+  }
+}
